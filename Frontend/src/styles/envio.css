@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background: #000000;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.btn-back {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  color: #0077ff;
+}
+
+.seccion-envio {
+  position: relative;
+  background: url('https://media.revistagq.com/photos/5ca5e33cf464880647f467b4/16:9/w_1280,c_limit/tiendas_moda_hombre_madrid_240364908.jpg') center center / cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.seccion-envio .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.contenido-envio {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.contenido-envio p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contenido-envio ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.contenido-envio ul li {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contenido-envio ul li:hover {
+  background: rgba(110, 150, 236, 0.5);
+  color: #000;
+}
+
+.contenido-envio ul li.seleccionada {
+  background: rgba(110, 150, 236, 0.9);
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-pedir {
+  background: #8fa9e2;
+  color: #000000;
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-pedir:hover {
+  background: #4e75ca;
+  color: #ffffff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.modal-content input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-login {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #333;
+}
+
+.cerrar {
+  background: none;
+  border: none;
+  color: #0077ff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+    margin-top: 25px;
+  }
+
+  .btn-back {
+    top: 5px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
+
+.soporte-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.volver-btn {
+    background-color: #e4e4e4;
+    border: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+.volver-btn:hover {
+    background-color: #ffffff;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://thumbs.dreamstime.com/b/fondo-de-tienda-moda-centro-comercial-ropa-en-perchas-muestra-la-venta-oto%C3%B1o-invierno-efecto-bokek-luces-borrosas-enfocar-enfoque-385303065.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-overlay {
+    background: rgba(255,255,255,0.50);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.hero-overlay h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.hero-overlay p {
+    font-size: 18px;
+    color: #444;
+}
+
+.soporte-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.contacto, .info-soporte {
+    background: #fff;
+    color: #222;
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1 1 400px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.contacto:hover, .info-soporte:hover {
+    transform: translateY(-5px);
+}
+
+.contacto h2, .info-soporte h2 {
+    color: #db241b;
+    margin-bottom: 15px;
+}
+
+.contacto form input,
+.contacto form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+}
+
+.contacto form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contacto form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #db241b;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.contacto form button:hover {
+    background-color: #a31a15;
+    transform: scale(1.05);
+}
+
+.info-soporte ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.info-soporte ul li {
+    margin-bottom: 12px;
+}
+
+.mensaje-envio {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00aa33;
+}
+
+.info-222urban {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.info-222urban .info-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+.info-222urban .info-txt {
+    max-width: 600px;
+}
+
+.info-222urban .info-txt h2 {
+    color: #db241b;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.info-222urban .info-txt p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+}
+
+@media(max-width: 900px){
+    .soporte-container, .info-222urban {
+        flex-direction: column;
+        align-items: center;
+    }
+}
