@@ -49,6 +49,13 @@ app.post("/direcciones", (req, res) => {
   );
 });
 
+app.get("/zonas_envio", (req, res) => {
+  db.query("SELECT * FROM zonas_envio", (err, result) => {
+    if (err) return res.status(500).json(err);
+    res.json(result);
+  });
+});
+
 app.listen(3001, () => {
   console.log("Servidor corriendo en http://localhost:3001");
 });
