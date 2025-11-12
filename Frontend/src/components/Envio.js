@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./../styles/envio.css";
 
 function Envio({ volver }) {
+  const [zonas, setZonas] = useState([]);
   const [zonaSeleccionada, setZonaSeleccionada] = useState(null);
   const [mensajeEnvio, setMensajeEnvio] = useState("");
 
-  const zonas = [
-    "Barrio Centro",
-    "Zona Norte",
-    "Zona Sur",
-    "La Plata",
-    "Villa Luzuriaga",
-    "Palermo",
-    "Caballito"
-  ];
+  useEffect(() => {
+    fetch("http://localhost:3001/zonas_envio")
+      .then(res => res.json())
+      .then(data => setZonas(data))
+      .catch(err => console.error(err));
+  }, []);
 
   const guardarDireccion = () => {
     const id_usuario = 1;
@@ -25,7 +23,7 @@ function Envio({ volver }) {
     })
     .then(res => res.json())
     .then(data => {
-      if(data.ok) setMensajeEnvio("Dirección guardada ✅");
+      if (data.ok) setMensajeEnvio("Dirección guardada ✅");
     })
     .catch(err => console.error(err));
   };
@@ -41,13 +39,13 @@ function Envio({ volver }) {
         <div className="contenido-envio">
           <p>¡Llegamos rápido a tu zona!</p>
           <ul>
-            {zonas.map((zona, index) => (
+            {zonas.map((zona) => (
               <li
-                key={index}
-                onClick={() => setZonaSeleccionada(zona)}
-                className={zonaSeleccionada === zona ? "seleccionada" : ""}
+                key={zona.id}
+                onClick={() => setZonaSeleccionada(zona.nombre)}
+                className={zonaSeleccionada === zona.nombre ? "seleccionada" : ""}
               >
-                {zona}
+                {zona.nombre}
               </li>
             ))}
           </ul>
